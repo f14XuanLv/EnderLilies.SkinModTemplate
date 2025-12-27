@@ -1,0 +1,21 @@
+# Build artifacts
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+dist/
+Content/Collections/
+Content/Developers/
+*.sln
+*.VC.db
+*.opensdf
+*.sdf
+
+# Generated assets
+Content/_Zenith/Characters/p0001_Lily/Textures/*.uasset
+
+# VS/IDE
+.vs/
+*.user
+*.opendb

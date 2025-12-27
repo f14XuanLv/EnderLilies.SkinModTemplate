@@ -1,0 +1,13 @@
+﻿{
+  "FileVersion": 3,
+  "EngineAssociation": "4.26",
+  "Category": "",
+  "Description": "Skin mod template",
+  "Modules": [
+    { "Name": "EnderLilies_SkinModTemplate", "Type": "Runtime", "LoadingPhase": "Default" }
+  ],
+  "Plugins": [
+    { "Name": "PythonScriptPlugin", "Enabled": true },
+    { "Name": "EditorScriptingUtilities", "Enabled": true }
+  ]
+}
