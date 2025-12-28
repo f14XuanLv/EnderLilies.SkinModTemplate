@@ -22,13 +22,15 @@ if not asset_lib.does_asset_exist(texture_path):
         task.save = True
         asset_tools.import_asset_tasks([task])
 
-tex = asset_lib.load_asset(texture_path)
+tex = asset_lib.load_asset(texture_path) if asset_lib.does_asset_exist(texture_path) else None
 if not tex:
     unreal.log_warning(f"Texture still missing after import: {texture_path}")
 
 # Create or update PrimaryAssetLabel
 label_path = f"{dest_path}/AutoLabel"
-label = asset_lib.load_asset(label_path)
+label = None
+if asset_lib.does_asset_exist(label_path):
+    label = asset_lib.load_asset(label_path)
 if not label:
     label = asset_tools.create_asset("AutoLabel", dest_path, unreal.PrimaryAssetLabel, None)
 
